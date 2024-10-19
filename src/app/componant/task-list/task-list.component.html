@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div class="cart-body">
+            <div class="d-flex mb-3">
+                <div class="p-2">
+                    <input type="text" class="form-control" placeholder="search task....">
+                </div>
+                <div class="ml-auto p-2 ">
+                    <button type="button" class="btn btn-primary">add task</button>
+                </div>
+            </div>
+            <table class="table table-boarderd">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Priyority</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of task">
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.title}}</td>
+                        <td>{{item.discription}}</td>
+                        <td>{{item.dueDate}}</td>
+                        <td>{{item.priority}}</td>
+                        <td></td>
+                    </tr>
+                   
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
