@@ -8,6 +8,7 @@ import { TaskService } from '../../service/task.service';
 })
 export class TaskListComponent {
    task :any[]=[]
+  searchText: string=""
 
   constructor(private taskService: TaskService){
 
