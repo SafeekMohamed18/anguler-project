@@ -8,21 +8,24 @@ import { AddTaskComponent } from './componant/add-task/add-task.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './filter.pipe';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './componant/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
     AddTaskComponent,
-    FilterPipe
+    FilterPipe,
+    EditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
  
   ],
   providers: [],

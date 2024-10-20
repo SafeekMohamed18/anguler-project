@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TaskService } from '../../service/task.service';
 
 @Component({
-  selector: 'app-add-task',
-  templateUrl: './add-task.component.html',
-  styleUrl: './add-task.component.css'
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrl: './edit.component.css'
 })
-export class AddTaskComponent {
+export class EditComponent {
   taskForm: FormGroup
+ 
  
 
   constructor(private fb:FormBuilder,private router:Router,private taskService:TaskService){
     this.taskForm=this.fb.group({
+      id:[''],
       title:["",[Validators.required]],
       discription:[""],
       dueDate:["",[Validators.required]],
@@ -21,6 +23,9 @@ export class AddTaskComponent {
 
     })
   }
+  // ngOnInit(): void{
+  //   this.taskService.getTaskById(this.taskid).toISOSrting().slice(0.10)
+  // }
   onSubmit(){
     let task = this.taskForm.value;
     this.taskService.addTask(task).subscribe(data=> {
@@ -31,5 +36,4 @@ export class AddTaskComponent {
   cancel(){
     this.taskForm.reset()
   }
-
 }
