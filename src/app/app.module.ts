@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './filter.pipe';
 import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './componant/edit/edit.component';
+import { LoginComponentComponent } from './componant/login-component/login-component.component';
+import { RegisterComponentComponent } from './componant/register-component/register-component.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { EditComponent } from './componant/edit/edit.component';
     TaskListComponent,
     AddTaskComponent,
     FilterPipe,
-    EditComponent
+    EditComponent,
+    RegisterComponentComponent,
+    LoginComponentComponent
   ],
   imports: [
     BrowserModule,
